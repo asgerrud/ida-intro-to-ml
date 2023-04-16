@@ -23,5 +23,6 @@ df = df.drop('quality', axis=1)
 print(df)
 
 # Visualise the data
+print("good quality", len(df[df['good_quality'].gt(0)]))  # trying to get count
 sns.pairplot(df, hue="good_quality", height=1.1)
-plt.show()
+# plt.show()
