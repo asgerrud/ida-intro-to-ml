@@ -28,7 +28,7 @@ baseline = 855/len(df)  # 0.535, Assuming most wines are good quality
 train_x, test_x, train_y, test_y = train_test_split(
     X, y, test_size=0.2, random_state=42)
 
-accuracies = []  # We expect around 73% at full depth?
+accuracies = []  # We expect around 73% when depth is not set (so default?)
 
 
 # 3.3 find depth which yields highest accuracy
