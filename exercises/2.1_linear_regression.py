@@ -6,9 +6,7 @@ import matplotlib.pyplot as plt
 
 # Use linear regression on wine dataset to predict how much alcohol a wine has; i.e. y=alcohol and test performance with RSME with a 80/20 split
 
-
 df = pd.read_csv('data/winequality-red.csv', sep=";")
-
 # Remove quality, add good quality
 df['good_quality'] = [1 if x >= 6 else 0 for x in df['quality']]
 df = df.drop('quality', axis=1)
@@ -43,4 +41,6 @@ plt.ylabel("True alcohol")
 min = min([pred_y.min(), test_y.min()])
 max = max([pred_y.max(), test_y.max()])
 plt.axline((min, min), (max, max), color="black")
-plt.show()
+plt.show() # Det er nogenlunde korrekt ud
+
+
